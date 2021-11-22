@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+      @font-face {
+          font-family: Love;
+          src: url(fontes/LoveMatch.otf)  /*format(opentype)*/, url(fontes/LoveMatch.ttf) /*format(truetype)*/;    
+      }
+      @font-face {
+          font-family: Celta;
+          src: url(fontes/CELTG.TTF);
+      }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-family: Love;
+            font-size: 70px;
+        }
+        h2{
+            font-family: Celta;
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Olá, Mundo!</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolor. Ducimus ipsa eum quas minus, voluptates voluptate repudiandae esse consequuntur facilis doloribus distinctio fugiat consequatur, obcaecati voluptas suscipit, fugit provident.</p>
+
+    <h2>Fonte Celta</h2>
+    
+</body>
+</html>
