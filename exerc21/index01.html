@@ -7,26 +7,29 @@
     <title>Modelo de Caixas</title>
 
     <style>
-        h1 {
+
+        h1 { /*box-level*/
             background-color: antiquewhite;
             height: 50px;
             width: 500px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: chocolate;
+            border: 10px solid rgb(211, 6, 6);
             padding: 10px;
-        }
-        a {
-            border-width: 5px;
-            border-style: dashed;
-            border-color: brown;
-            padding: 5px;
+            margin: auto;
+            text-align: center;
+
+            outline: 5px dashed silver ;
         }
 
+        a { /*inline-level*/
+            /*display: block; Altera para block, em vez de inline*/
+            border: 5px dashed brown;
+            padding: 5px;
+        }
 
     </style>
 </head>
 <body>
+
     <h1>Exemplo de caixa box-level</h1>
     <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level.</a> Vamos ver como tudo isso funciona. </p>
     
