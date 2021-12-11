@@ -8,11 +8,11 @@
 }
 
 :root {
-    --cabecalho: #38c979;
-    --corpo: #84e1ad;
-    --nav: #065f2e;
-    --titulos:  #045729;
-    --texto:  #012411;
+    --cor1: #84e1ad; /* corpo */
+    --cor2: #38c979; /*cabeçalho*/       
+    --cor3: #065f2e; /* nav */
+    --cor4: #045729; /* títulos */
+    --cor5: #012411; /* textos*/
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
@@ -27,15 +27,19 @@
 
 
 body {
-    background-color: var(--corpo);
+    background-color: var(--cor1);
     font-family: var(--fonte-padrao);
     font-size: 1em;
-    
-} 
+}
+
+a.externo::after {
+    content: "\00A0\1F517" ;
+    font-size: 0.8em;
+}
 
 
 header {
-    background-image: linear-gradient(to bottom, var(--cabecalho), var(--nav) );    
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3) );    
     min-height: 150px;
     text-align: center;
     
@@ -45,6 +49,7 @@ header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
     font-size: 3em;
+    font-weight: normal;
     padding-top: 30px;
     margin-bottom: 20px;
     text-shadow: 1px 1px 3px #012411 ;
@@ -64,7 +69,7 @@ header p {
 }
 
 nav {
-    background-color: var(--nav);
+    background-color: var(--cor3);
     padding: 10px;
     box-shadow: 0px 5px 3px hsla(147, 95%, 7%, 0.445);
    
@@ -80,8 +85,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--corpo);
-    color: var(--texto);
+    background-color: var(--cor1);
+    color: var(--cor5);
     border-radius: 5px;
     transition-duration: 0.5s;
 }
@@ -99,19 +104,21 @@ main {
 }
 
 main h1 {
-    color: var(--titulos);
+    color: var(--cor4);
     font-family: var(--fonte-android);
+    font-weight: normal;
     text-align: center;
-    background-image: linear-gradient(to right, transparent, var(--corpo), transparent);
+    background-image: linear-gradient(to right, transparent, var(--cor1), transparent);
     padding: 3px 0px;
     
 }
 
 main h2 {
-    color: var(--titulos);
+    color: var(--cor4);
     font-family: var(--fonte-android);
     font-size: 1.2em;
-    background-image: linear-gradient(to right, var(--corpo), transparent);
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
     padding: 2px 0px 5px 15px ;
 
 }
@@ -124,7 +131,7 @@ main  p {
     line-height: 1.5em;
 }
 main strong {
-    color: var(--titulos);
+    color: var(--cor4);
     font-weight: bold;
     
 }
@@ -132,12 +139,12 @@ main strong {
 main a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--nav);
+    color: var(--cor3);
     background-color: rgb(239, 240, 199);
     padding: 0px 5px;
 }
 main a:hover {
-    color: var(--texto);
+    color: var(--cor5);
     background-color: rgb(235, 236, 136);
 }
 
@@ -152,7 +159,62 @@ main img.pequena {
     
 }
 
-footer {
-    background-color: var(--texto);
+div.video {
+    background-color: var(--cor4);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #01241186;
+    border: 1px solid #012411;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
     color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;    
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+aside > ul {
+    list-style-type: "\2714\00A0";
+    list-style-position: inside;
+    padding-left: 30px;
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    height: 25px;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    color: var(--cor1);
 }
